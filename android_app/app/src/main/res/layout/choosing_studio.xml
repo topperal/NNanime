@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+
+<RelativeLayout
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="input manga score..."
+        android:inputType="text"
+        android:padding="10sp"
+        android:textColor="@color/blue" />
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/listofstudio"
+     android:layout_width="match_parent"
+     android:layout_below="@id/find"
+     android:layout_height="500sp"
+     android:layout_marginTop="20sp"
+     android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/previos"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/listofstudio"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/previous"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/listofstudio"
+        android:layout_marginStart="270sp"
+        android:background="@drawable/circle"
+        android:layout_marginTop="5sp"
+        android:src="@drawable/next"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</RelativeLayout>
+
+</LinearLayout>

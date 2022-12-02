@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NNanime</string>
+    <string name="got_it">Got it!\nAt fall 2022 for anime\nwhich based on manga with score:</string>
+    <string name="main_genre">main genre: </string>
+    <string name="production_studio">production studio: </string>
+    <string name="prediction_score">PREDICTION SCORE: </string>
+</resources>

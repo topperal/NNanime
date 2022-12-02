@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inputdata"
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/manga_score"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="input manga score..."
+        android:inputType="numberDecimal"
+        android:textColor="@color/blue"
+        android:layout_marginTop="50sp"
+        android:layout_marginStart="50sp"
+        android:padding="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manga_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="choose genre..."
+        android:padding="10sp"
+        android:textColor="@color/blue" />
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner_studio"-->
+<!--        android:background="@drawable/rectangle_rounded_all"-->
+<!--        android:hint = "choose studio..."-->
+<!--        android:textColor="@color/blue"-->
+<!--        android:layout_below="@id/spinner_genre"-->
+<!--        android:layout_marginTop="50sp"-->
+<!--        android:layout_marginStart="50sp"-->
+<!--        android:padding="10sp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <ImageButton
+        android:id="@+id/udpate"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/spinner_genre"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="400sp"
+        android:background="@drawable/circle"
+        android:src="@drawable/refresh"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/next_to_studio"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/spinner_genre"
+        android:layout_marginStart="270sp"
+        android:layout_marginTop="400sp"
+        android:background="@drawable/circle"
+        android:src="@drawable/next" />
+
+</RelativeLayout>

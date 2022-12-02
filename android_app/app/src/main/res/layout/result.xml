@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inputdata"
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/got_it"
+    android:layout_marginTop="10sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/got_it"
+    android:textColor="@color/yellow"
+    android:textSize="17sp"
+    android:layout_centerHorizontal="true"
+    android:padding="5sp"/>
+
+<TextView
+    android:id="@+id/main_genre"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/main_genre"
+    android:textColor="@color/yellow"
+    android:layout_below="@id/got_it"
+    android:textSize="17sp"
+    android:layout_centerHorizontal="true"/>
+
+<TextView
+    android:id="@+id/production_studio"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/production_studio"
+    android:textColor="@color/yellow"
+    android:layout_below="@id/main_genre"
+    android:textSize="17sp"
+    android:layout_centerHorizontal="true"
+    android:padding="5sp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/predict"
+    android:text="@string/prediction_score"
+    android:textSize="20sp"
+    android:layout_below="@id/production_studio"
+    android:layout_centerHorizontal="true"
+    android:textColor="@color/yellow"/>
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/predict"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:padding="20sp"
+        android:textColor="@color/blue" />
+
+    <ImageButton
+        android:id="@+id/to_home"
+        android:src="@drawable/home"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="270sp"
+        android:layout_marginTop="0sp"
+        android:background="@drawable/circle"
+        android:layout_below="@id/light"/>
+    <ImageView
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/res"
+        android:padding="20sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/lightbulb"
+        />
+</RelativeLayout>
