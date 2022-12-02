@@ -1,0 +1,19 @@
+Исх значения: 
+
+ProcessingManga
+
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,9,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
+
+ProcessingStudio
+
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 6, 1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
+
+ProcessingGenre
+
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 6, 1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1

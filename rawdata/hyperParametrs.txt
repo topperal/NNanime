@@ -1,0 +1,94 @@
+
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,9,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
+
+
+{"koeffA":0.9498929554207958,
+"koeffB":0.05428703896327447,
+"mangdisp":0.32034993092877057, 
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,9,1); - 4 сек
+{"koeffA":0.9574324898719857,
+"koeffB":0.04736684142246125,
+"mangdisp":0.34844494153521105,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,18,1); - 11 сек
+{"koeffA":0.9506787215455024,
+"koeffB":0.06321484273628919,
+"mangdisp":0.2840946717654109,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,5,1); - 3 сек{"koeffA":0.9460890034478575,
+"koeffB":0.07038486908148388,
+"mangdisp":0.2627185179032954,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,2,1); - 1 сек
+{"koeffA":0.965272122456577,
+"koeffB":0.045529712663942214,
+"mangdisp":0.3407589877968062,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,32,1);
+{"koeffA":0.9662369982458292,
+"koeffB":0.044621657844447965,
+"mangdisp":0.33107779635665757,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,36,1); - 30 сек
+
+{"koeffA":0.9522808218096721,
+"koeffB":0.058405272148511087,
+"mangdisp":0.2988088785863352,
+(4,9,1); .setMaxError(0.0001) - 5 сек{"koeffA":0.9549425317708484,
+"koeffB":0.05361075500059743,
+"mangdisp":0.33739248698781293,
+(4,9,1); .setMaxError(0.00001) 
+setLearningRate(0.9) - 4 сек{"koeffA":0.9530941528872343,
+"koeffB":0.06672459744599818,
+"mangdisp":0.3251671771023027,
+{"koeffA":0.9415871757493146,
+"koeffB":0.25668513463488746,
+"mangdisp":0.2793148805019959,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,9,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.001);//0-1
+{"koeffA":0.9460468318379966,
+"koeffB":0.04796241337698111,
+"mangdisp":0.2674313615534152,
+setMaxError(0.001);//0-1
+setLearningRate(0.1);//0-1 - 5 сек{"koeffA":0.9464366318146882,
+"koeffB":0.044748104826990355,
+"mangdisp":0.26700335579335854,
+{"koeffA":0.9459083413533276,
+"koeffB":0.04305112982322368,
+"mangdisp":0.26029805135644024, - 7 сек
+{"koeffA":0.9582971927062349,
+"koeffB":0.051309327006205586,
+"mangdisp":0.35221079734131044,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,15,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.9);//0-1 - 6 сек{"koeffA":0.9556924949705742,
+"koeffB":0.04882842490121931,
+"mangdisp":0.3349464771908431,
+.setLearningRate(0.6) - 7 сек{"koeffA":0.9511695537853794,
+"koeffB":0.04817686688613776,
+"mangdisp":0.31138671636829574,
+ultiLayerPerceptron(4,12,1);{"koeffA":0.9578490278370243,
+"koeffB":0.058593690773778045,
+"mangdisp":0.3559642236434628,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,12,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.9);//0-1
+- 5 сек{"koeffA":0.9522726021456265,
+"koeffB":0.050872877340424685,
+"mangdisp":0.3175144488989962,
+{"koeffA":0.9544830697754707,
+"koeffB":0.06492427094386471,
+"mangdisp":0.34004155595382257,
+{"koeffA":0.9506880099125309,
+"koeffB":0.056007801923573346,
+"mangdisp":0.31935554855083276,
+{"koeffA":0.9507298110824833,
+"koeffB":0.058801852725453144,
+"mangdisp":0.2958952062765712,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,8,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1 - 4 сек{"koeffA":0.9455374260327392,
+"koeffB":0.05121922442868423,
+"mangdisp":0.2653745683811797,
+NeuralNetwork neuralNet = new MultiLayerPerceptron(4,8,1);
+        ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.1);//0-1
+3 сек
