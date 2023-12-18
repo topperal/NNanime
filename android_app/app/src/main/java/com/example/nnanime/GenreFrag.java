@@ -4,51 +4,47 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.Collections;
 
-public class StudioFrag extends Fragment implements ListenerData  {
+public class GenreFrag extends Fragment implements ListenerData  {
 
     FragmentTransaction fTrans;
-    private static final String TAG = "StudioFrag";
-    com.example.nnanime.StudioAdapter adapter;//объявляем адаптер
-    public RecyclerView listofstudio;
+    private static final String TAG = "GenreFrag";
+    GenreAdapter adapter;//объявляем адаптер
+    public RecyclerView listofgenre;
     SearchView find;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.choosing_studio, null);//всегда нужно для фрагмента, указываем на каком layout работаем
+        View v = inflater.inflate(R.layout.choosing_genre, null);//всегда нужно для фрагмента, указываем на каком layout работаем
 
         ImageButton btn_prev = (ImageButton) v.findViewById(R.id.previos);
         ImageButton btn_next = (ImageButton) v.findViewById(R.id.next);
         TextView head = (TextView) v.findViewById(R.id.header_title);
-        listofstudio = (RecyclerView) v.findViewById(R.id.listofstudio);
+        listofgenre = (RecyclerView) v.findViewById(R.id.listofgenre);
         find = (SearchView) v.findViewById(R.id.find);
-        head.setText("Selection Studio");
+        head.setText("Selection Genres");
 
-        Collections.sort(((MainActivity) getActivity()).studios);
-        adapter = new com.example.nnanime.StudioAdapter(getActivity());
+        Collections.sort(((MainActivity) getActivity()).genres);
+        adapter = new GenreAdapter(getActivity());
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2,
                 GridLayoutManager.VERTICAL, false);
         //listofstudio.setLayoutManager(new LinearLayoutManager(getActivity()));
-        listofstudio.setLayoutManager(gridLayoutManager);
-        listofstudio.setAdapter(adapter);
+        listofgenre.setLayoutManager(gridLayoutManager);
+        listofgenre.setAdapter(adapter);
 
         //описываем работу поисковой строки
         find.clearFocus();//сбросить поисковик(чтобы он не искал предыдущий запрос)
@@ -79,12 +75,12 @@ public class StudioFrag extends Fragment implements ListenerData  {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(((MainActivity)getActivity()).st_name==""){
-                    Toast.makeText(getActivity(),"Select one studio, please", Toast.LENGTH_LONG).show();
+                if( ((MainActivity) getActivity()).currentgenredisp.isEmpty()){
+                    Toast.makeText(getActivity(),"Select atleast one genre, please", Toast.LENGTH_LONG).show();
                 }
                 else {
                     fTrans = getFragmentManager().beginTransaction();
-                    fTrans.replace(R.id.frgmCont,((MainActivity) getActivity()).additionalParametrs);
+                    fTrans.replace(R.id.frgmCont, ((MainActivity) getActivity()).choosingStudio);
                     fTrans.addToBackStack(null);
                     fTrans.commit();
                 }
@@ -95,11 +91,12 @@ public class StudioFrag extends Fragment implements ListenerData  {
     }
 
     public void getData(Activity activity) {
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-            }
-        });
+
+//        getActivity().runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//            }
+//        });
 
     }
 

@@ -103,12 +103,50 @@ public class ReadData implements BroadcastData{
                 double gdisp = (Double) test.get("stdisp");
                 ((MainActivity)activity).studios.add(new StudioOrGenre(name, score, gdisp));
             }
-            /*for(int i = 0; i < ((MainActivity)activity).studios.size(); i++) {
-                System.out.println(((MainActivity)activity).studios.get(i).name + "score "
-                        + ((MainActivity)activity).studios.get(i).score + " disp "
-                        + ((MainActivity)activity).studios.get(i).dispersia);
+
+            JSONArray themeArr = (JSONArray) obj.get("theme");
+            Iterator themeItr = themeArr.iterator();
+            ((MainActivity)activity).themes = new ArrayList<>();
+            //for(int j = 0; j < studioArr.length(); j++) {
+            ((MainActivity)activity).themes.add(new AddParam(" input theme...", 0, 1));
+            while(themeItr.hasNext()) {
+                JSONObject test = (JSONObject) themeItr.next();
+                String name = (String) test.get("thname");
+                //System.out.println(name);
+                double score = (Double) test.get("thrait");
+                double gdisp = (Double) test.get("thdisp");
+                ((MainActivity)activity).themes.add(new AddParam(name, score, gdisp));
+            }
+
+            JSONArray ratingArr = (JSONArray) obj.get("rating");
+            Iterator ratingItr = ratingArr.iterator();
+            ((MainActivity)activity).ratings = new ArrayList<>();
+            ((MainActivity)activity).ratings.add(new AddParam(" input rating...", 0, 1));
+            while(ratingItr.hasNext()) {
+                JSONObject test = (JSONObject) ratingItr.next();
+                String name = (String) test.get("rtname");
+                double score = (Double) test.get("rtrait");
+                double disp = (Double) test.get("rtdisp");
+                ((MainActivity)activity).ratings.add(new AddParam(name, score, disp));
+            }
+
+            JSONArray demographicArr = (JSONArray) obj.get("demographic");
+            Iterator demographicItr = demographicArr.iterator();
+            ((MainActivity)activity).demographics = new ArrayList<>();
+            ((MainActivity)activity).demographics.add(new AddParam(" input demographic...", 0, 1));
+            while(demographicItr.hasNext()) {
+                JSONObject test = (JSONObject) demographicItr.next();
+                String name = (String) test.get("dmname");
+                double score = (Double) test.get("dmrait");
+                double disp = (Double) test.get("dmdisp");
+                ((MainActivity)activity).demographics.add(new AddParam(name, score, disp));
+            }
+           /* for(int i = 0; i < ((MainActivity)activity).themes.size(); i++) {
+                System.out.println(((MainActivity)activity).themes.get(i).name + "score "
+                        + ((MainActivity)activity).themes.get(i).score + " disp "
+                        + ((MainActivity)activity).themes.get(i).dispersia);
             }*/
-            Collections.sort(((MainActivity) activity).studios);
+//            Collections.sort(((MainActivity) activity).ratings);
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
@@ -128,8 +166,9 @@ public class ReadData implements BroadcastData{
 
     @Override
     public void sendtoAdapter() {
+
        for(ListenerData ld : fragments) {
-           ld.getData();
+           ld.getData(activity);
        }
     }
 }

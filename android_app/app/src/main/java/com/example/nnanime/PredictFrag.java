@@ -14,9 +14,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentManager;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +31,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class PredictFrag extends Fragment implements ListenerData {
+public class PredictFrag extends Fragment{// implements ListenerData
 
     private static final String TAG = "PredictFrag";
 
@@ -37,7 +40,7 @@ public class PredictFrag extends Fragment implements ListenerData {
     //String[] genre = { "India", "USA", "China", "Japan", "Other"};
    // ArrayList<StudioOrGenre> genres;
    // ArrayList<StudioOrGenre> studios;
-   Spinner spin_genre;
+//   Spinner spin_genre;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,32 +48,36 @@ public class PredictFrag extends Fragment implements ListenerData {
         View v = inflater.inflate(R.layout.prediction, null);//всегда нужно для фрагмента, указываем на каком layout работаем
 
 
-        ((MainActivity)getActivity()).readData.getJSON();
+       ((MainActivity)getActivity()).readData.getJSON();
 
         //System.out.println("finalLine:  "+ finalLine);
-        spin_genre = (Spinner) v.findViewById(R.id.spinner_genre);
+//        spin_genre = (Spinner) v.findViewById(R.id.spinner_genre);
        // Spinner spin_studio = (Spinner) v.findViewById(R.id.spinner_studio);
         ImageButton but_next = (ImageButton) v.findViewById(R.id.next_to_studio);
         ImageButton but_refresh = (ImageButton) v.findViewById(R.id.udpate);
         EditText manga_score = (EditText) v.findViewById(R.id.manga_score);
-
+        TextView rule = (TextView) v.findViewById(R.id.rules);
+        TextView head = (TextView) v.findViewById(R.id.header_title) ;
+        rule.setText("Now we will predict anime score for current season by relative manga score, genres, studio and some additional parametrs. First, please input relative manga score");
+        head.setText("Prediction anime score");
         //((MainActivity)getActivity()).manga_score = Double.parseDouble(manga_score.getText().toString());
         //System.out.println("manga score " + manga_score);
 
-        spin_genre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                //Toast.makeText(getActivity(),((StudioOrGenre) genres.get(position)).name , Toast.LENGTH_LONG).show();
-                ((MainActivity)getActivity()).currentgenredisp = ((MainActivity)getActivity()).genres.get(position).dispersia;
-                ((MainActivity)getActivity()).currentgenrescore = ((MainActivity)getActivity()).genres.get(position).score;
-                ((MainActivity)getActivity()).position = position;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                // TODO Auto-generated method stub
-            }
-        });
+//        spin_genre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+//                //Toast.makeText(getActivity(),((StudioOrGenre) genres.get(position)).name , Toast.LENGTH_LONG).show();
+//                ((MainActivity)getActivity()).currentgenredisp = ((MainActivity)getActivity()).genres.get(position).dispersia;
+//                ((MainActivity)getActivity()).currentgenrescore = ((MainActivity)getActivity()).genres.get(position).score;
+//                ((MainActivity)getActivity()).position = position;
+//                System.out.println(position);
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//                // TODO Auto-generated method stub
+//            }
+//        });
 
         but_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +93,7 @@ public class PredictFrag extends Fragment implements ListenerData {
                 }
                 else {
                     fTrans = getFragmentManager().beginTransaction();
-                    fTrans.replace(R.id.frgmCont, ((MainActivity) getActivity()).choosingStudio);
+                    fTrans.replace(R.id.frgmCont, ((MainActivity) getActivity()).genreFrag);
                     fTrans.addToBackStack(null);
                     fTrans.commit();
                 }
@@ -97,26 +104,32 @@ public class PredictFrag extends Fragment implements ListenerData {
             @Override
             public void onClick(View view) {
                 ((MainActivity)getActivity()).readData.getJSON();
+                Toast.makeText(getActivity(),"Download data from server...", Toast.LENGTH_LONG).show();
             }
+
         });
 
         return v;
     }
 
-    public void getData() {
-        //Log.d(TAG,("genrelistener"));
-        Collections.sort(((MainActivity)getActivity()).genres);
-        ArrayAdapter<StudioOrGenre> adapterGenre =
-                new ArrayAdapter<StudioOrGenre>(getActivity(),  android.R.layout.simple_spinner_dropdown_item, ((MainActivity)getActivity()).genres);
-        adapterGenre.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item);
+//    @Override
+//    public void getData(Activity activity) {
+//
+//    }
 
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                spin_genre.setAdapter(adapterGenre);
-            }
-        });
-
-    }
+//    public void getData(Activity activity) {
+//        //Log.d(TAG,("genrelistener"));
+//        Collections.sort(((MainActivity)getActivity()).genres);
+//        ArrayAdapter<StudioOrGenre> adapterGenre =
+//                new ArrayAdapter<StudioOrGenre>(getActivity(),  android.R.layout.simple_spinner_dropdown_item, ((MainActivity)getActivity()).genres);
+//        adapterGenre.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item);
+//        getActivity().runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                spin_genre.setAdapter(adapterGenre);
+//            }
+//        });
+//
+//    }
 
 }

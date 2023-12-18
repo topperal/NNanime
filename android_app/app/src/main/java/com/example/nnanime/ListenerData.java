@@ -1,5 +1,7 @@
 package com.example.nnanime;
 
+import android.app.Activity;
+
 public interface ListenerData {
-    void getData();
+    void getData(Activity activity);
 }
