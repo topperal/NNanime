@@ -34,7 +34,7 @@ public class ProcessingManga {
         String[] seasons = {"winter", "spring", "summer", "fall"};
         String finalLine = "";
 
-        for (int i = 2015; i < 2023; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
+        for (int i = 2015; i < 2024; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
             for (int j = 0; j < 4; j++) {//проходим по всем сезонам
                 ArrayList[] result = new ArrayList[2];
                 result = getMangaData(i, seasons[j]);//в массив записываем рейтинги аниме и манги
@@ -48,10 +48,10 @@ public class ProcessingManga {
                 finalData.add(new MangaCoeff((i+0.25*j),res[0],res[1], disp));//заполняем собств класс
                 //System.out.println("f(x) = " + res[0] + " * x + " + res[1] + "   dispersia: " + disp);
 
-                if ((i == 2022) && (j == 2)) {
+                if ((i == 2023) && (j == 2)) {
 
                     double[] predictManga = new double[3];
-                    for (int h = 0; h < 3; h++) {
+                    for (int h = 0; h < 3; h++) {//finalData содержит коэфф а, б и дисперсию
                         predictManga[h] = trainNeuralNetwork(h, finalData);
                     }
                     finalLine += "{\"koeffA\":" + predictManga[0] + ",\n\"koeffB\":" + predictManga[1] + ",\n\"mangdisp\":" + predictManga[2] +",\n" ;
@@ -70,8 +70,10 @@ public class ProcessingManga {
         System.out.println("Time stamp N1:" + new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss:MM").format(new Date()));
 
         int maxIterations = 10000;
-        NeuralNetwork neuralNet = new MultiLayerPerceptron(4,8,1);
+//        NeuralNetwork neuralNet = new MultiLayerPerceptron(4,8,1);
+        NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+//        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
         ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
         ((LMS) neuralNet.getLearningRule()).setMaxIterations(maxIterations);//0-1
         TrainingSet trainingSet = new TrainingSet();
