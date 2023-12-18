@@ -1,20 +1,145 @@
-32937;8.27;Studio Deen;Adventure;60553;8.63
-33206;7.99;Kyoto Animation;Fantasy;80119;7.97
-32615;7.97;Nut;Action;88930;8.42
-33487;6.74;SILVER LINK.;Comedy;46716;7.29
-33506;7.36;A-1 Pictures;Action;13492;7.91
-32949;7.17;Lerche;Drama;44929;7.27
-33731;7.46;Doga Kobo;Comedy;96526;7.74
-33988;7.56;A-1 Pictures;Comedy;82745;7.75
-34096;8.99;Bandai Namco Pictures;Action;44;8.62
-33743;6.51;Diomedéa;Drama;67019;7.43
-33095;8.74;Studio Deen;Drama;26704;8.26
-33337;7.67;Madhouse;Drama;53539;7.56
-32924;7.12;J.C.Staff;Comedy;86327;7.84
-33417;7.14;Studio Deen;Boys Love;17706;8.05
-33089;7.53;Yaoyorozu;Adventure;98425;6.94
-31783;7.66;TMS Entertainment;Sports;23627;7.99
-34148;6.62;EMT Squared;Comedy;101613;7.1
-32878;6.12;Pierrot;Action;56945;6.81
-33019;6.88;Studio Deen;Comedy;121252;7.23
-34088;5.64;LandQ studios;Action;52005;7.1
+32937;8.26;Studio Deen;Adventure;60553;8.62;Isekai;PG-13 - Teens 13 or older;UNKNOWN
+33206;7.96;Kyoto Animation;Fantasy;80119;7.94;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+32615;7.96;Nut;Action;88930;8.42;Isekai;R - 17+ (violence & profanity);UNKNOWN
+33487;6.74;SILVER LINK.;Comedy;46716;7.28;Harem;PG-13 - Teens 13 or older;Shounen
+33506;7.35;A-1 Pictures;Action;13492;7.89;Mythology;PG-13 - Teens 13 or older;Shounen
+31765;7.56;A-1 Pictures;Action;103244;7.89;Video Game;R+ - Mild Nudity;UNKNOWN
+32949;7.14;Lerche;Drama;44929;7.25;Love Polygon;R+ - Mild Nudity;Seinen
+33731;7.44;Doga Kobo;Comedy;96526;7.73;CGDCT;PG-13 - Teens 13 or older;Shounen
+31758;8.79;Shaft;Action;14893;8.93;Vampire;R - 17+ (violence & profanity);UNKNOWN
+33988;7.54;A-1 Pictures;Comedy;82745;7.75;Mythology;PG-13 - Teens 13 or older;Seinen
+34096;8.98;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+31658;8.08;Production I.G;Sports;83807;7.86;School;PG-13 - Teens 13 or older;Shounen
+33743;6.51;Diomedéa;Drama;67019;7.43;Music;R+ - Mild Nudity;Shounen
+31812;8.25;A-1 Pictures;Action;3866;8.41;Historical;R - 17+ (violence & profanity);Shounen
+33095;8.72;Studio Deen;Drama;26704;8.27;Adult Cast;PG-13 - Teens 13 or older;Josei
+33581;7.25;Seven Arcs Pictures;Action;86336;7.58;Harem;PG-13 - Teens 13 or older;Shounen
+33337;7.66;Madhouse;Drama;53539;7.51;Adult Cast;PG-13 - Teens 13 or older;Seinen
+30485;6.32;SILVER LINK.;Mystery;92158;7.04;Gore;R - 17+ (violence & profanity);UNKNOWN
+34414;7.49;Satelight;Action;93398;7.79;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+32924;7.12;J.C.Staff;Comedy;86327;7.85;CGDCT;PG-13 - Teens 13 or older;Seinen
+33417;7.09;Studio Deen;Boys Love;17706;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33089;7.54;Yaoyorozu;Adventure;98425;6.89;Anthropomorphic;PG - Children;UNKNOWN
+31783;7.64;TMS Entertainment;Sports;23627;7.99;Racing;PG-13 - Teens 13 or older;Shounen
+34148;6.62;EMT Squared;Comedy;101613;7.02;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+32878;6.1;Pierrot;Action;56945;6.75;Detective;PG-13 - Teens 13 or older;Shounen
+33019;6.87;Studio Deen;Comedy;121252;7.16;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34549;7.36;Khara;Adventure;108906;7.04;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33204;6.84;Signal.MD;Adventure;104959;6.56;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33013;7.26;Studio Deen;Boys Love;17706;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33949;7.06;feel.;Comedy;76867;7.44;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34753;6.22;SILVER LINK.;Mystery;7653;6.09;Psychological;R - 17+ (violence & profanity);UNKNOWN
+34391;7.22;Sunrise;Action;37683;7.79;Mecha;R - 17+ (violence & profanity);UNKNOWN
+33818;7.36;J.C.Staff;Comedy;11061;7.79;Iyashikei;PG-13 - Teens 13 or older;Shounen
+33035;7.31;Kinema Citrus;Comedy;45353;7.52;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+36491;7.22;Foch Films;Action;79193;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34759;6.87;T-Rex;Hentai;74673;7.12;UNKNOWN;Rx - Hentai;UNKNOWN
+34008;6.91;MAPPA;Sports;61009;7.58;School;PG-13 - Teens 13 or older;Shounen
+34016;5.98;Studio Deen;Comedy;65121;6.09;School;PG-13 - Teens 13 or older;Shoujo
+34088;5.62;LandQ studios;Action;52005;7.09;Historical;PG-13 - Teens 13 or older;UNKNOWN
+34535;6.63;Gathering;Boys Love;103028;7.3;Anthropomorphic;G - All Ages;Josei
+34394;6.44;W-Toon Studio;Comedy;81721;7.08;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+35522;6.74;SILVER LINK.;Comedy;75079;6.92;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+32937;8.26;Studio Deen;Adventure;60553;8.62;Isekai;PG-13 - Teens 13 or older;UNKNOWN
+33206;7.96;Kyoto Animation;Fantasy;80119;7.94;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+32615;7.96;Nut;Action;88930;8.42;Isekai;R - 17+ (violence & profanity);UNKNOWN
+33487;6.74;SILVER LINK.;Comedy;46716;7.28;Harem;PG-13 - Teens 13 or older;Shounen
+33506;7.35;A-1 Pictures;Action;13492;7.89;Mythology;PG-13 - Teens 13 or older;Shounen
+31765;7.56;A-1 Pictures;Action;103244;7.89;Video Game;R+ - Mild Nudity;UNKNOWN
+32949;7.14;Lerche;Drama;44929;7.25;Love Polygon;R+ - Mild Nudity;Seinen
+33731;7.44;Doga Kobo;Comedy;96526;7.73;CGDCT;PG-13 - Teens 13 or older;Shounen
+31758;8.79;Shaft;Action;14893;8.93;Vampire;R - 17+ (violence & profanity);UNKNOWN
+33988;7.54;A-1 Pictures;Comedy;82745;7.75;Mythology;PG-13 - Teens 13 or older;Seinen
+34096;8.98;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+31658;8.08;Production I.G;Sports;83807;7.86;School;PG-13 - Teens 13 or older;Shounen
+33743;6.51;Diomedéa;Drama;67019;7.43;Music;R+ - Mild Nudity;Shounen
+31812;8.25;A-1 Pictures;Action;3866;8.41;Historical;R - 17+ (violence & profanity);Shounen
+33095;8.72;Studio Deen;Drama;26704;8.27;Adult Cast;PG-13 - Teens 13 or older;Josei
+33581;7.25;Seven Arcs Pictures;Action;86336;7.58;Harem;PG-13 - Teens 13 or older;Shounen
+33337;7.66;Madhouse;Drama;53539;7.51;Adult Cast;PG-13 - Teens 13 or older;Seinen
+30485;6.32;SILVER LINK.;Mystery;92158;7.04;Gore;R - 17+ (violence & profanity);UNKNOWN
+34414;7.49;Satelight;Action;93398;7.79;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+32924;7.12;J.C.Staff;Comedy;86327;7.85;CGDCT;PG-13 - Teens 13 or older;Seinen
+33417;7.09;Studio Deen;Boys Love;17706;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33089;7.54;Yaoyorozu;Adventure;98425;6.89;Anthropomorphic;PG - Children;UNKNOWN
+31783;7.64;TMS Entertainment;Sports;23627;7.99;Racing;PG-13 - Teens 13 or older;Shounen
+34148;6.62;EMT Squared;Comedy;101613;7.02;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+32878;6.1;Pierrot;Action;56945;6.75;Detective;PG-13 - Teens 13 or older;Shounen
+33019;6.87;Studio Deen;Comedy;121252;7.16;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34549;7.36;Khara;Adventure;108906;7.04;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33204;6.84;Signal.MD;Adventure;104959;6.56;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33013;7.26;Studio Deen;Boys Love;17706;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33949;7.06;feel.;Comedy;76867;7.44;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34753;6.22;SILVER LINK.;Mystery;7653;6.09;Psychological;R - 17+ (violence & profanity);UNKNOWN
+34391;7.22;Sunrise;Action;37683;7.79;Mecha;R - 17+ (violence & profanity);UNKNOWN
+33818;7.36;J.C.Staff;Comedy;11061;7.79;Iyashikei;PG-13 - Teens 13 or older;Shounen
+33035;7.31;Kinema Citrus;Comedy;45353;7.52;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+36491;7.22;Foch Films;Action;79193;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34759;6.87;T-Rex;Hentai;74673;7.12;UNKNOWN;Rx - Hentai;UNKNOWN
+34008;6.91;MAPPA;Sports;61009;7.58;School;PG-13 - Teens 13 or older;Shounen
+34016;5.98;Studio Deen;Comedy;65121;6.09;School;PG-13 - Teens 13 or older;Shoujo
+34088;5.62;LandQ studios;Action;52005;7.09;Historical;PG-13 - Teens 13 or older;UNKNOWN
+34535;6.63;Gathering;Boys Love;103028;7.3;Anthropomorphic;G - All Ages;Josei
+34394;6.44;W-Toon Studio;Comedy;81721;7.08;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+35522;6.74;SILVER LINK.;Comedy;75079;6.92;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+32937;8.26;Studio Deen;Adventure;60553;8.62;Isekai;PG-13 - Teens 13 or older;UNKNOWN
+33206;7.96;Kyoto Animation;Fantasy;80119;7.94;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+32615;7.96;Nut;Action;88930;8.42;Isekai;R - 17+ (violence & profanity);UNKNOWN
+33487;6.74;SILVER LINK.;Comedy;46716;7.28;Harem;PG-13 - Teens 13 or older;Shounen
+33506;7.35;A-1 Pictures;Action;13492;7.89;Mythology;PG-13 - Teens 13 or older;Shounen
+31765;7.56;A-1 Pictures;Action;103244;7.89;Video Game;R+ - Mild Nudity;UNKNOWN
+32949;7.14;Lerche;Drama;44929;7.25;Love Polygon;R+ - Mild Nudity;Seinen
+33731;7.44;Doga Kobo;Comedy;96526;7.73;CGDCT;PG-13 - Teens 13 or older;Shounen
+31758;8.79;Shaft;Action;14893;8.93;Vampire;R - 17+ (violence & profanity);UNKNOWN
+33988;7.54;A-1 Pictures;Comedy;82745;7.75;Mythology;PG-13 - Teens 13 or older;Seinen
+34096;8.98;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+31658;8.08;Production I.G;Sports;83807;7.86;School;PG-13 - Teens 13 or older;Shounen
+33743;6.51;Diomedéa;Drama;67019;7.43;Music;R+ - Mild Nudity;Shounen
+31812;8.25;A-1 Pictures;Action;3866;8.41;Historical;R - 17+ (violence & profanity);Shounen
+33095;8.72;Studio Deen;Drama;26704;8.27;Adult Cast;PG-13 - Teens 13 or older;Josei
+33581;7.25;Seven Arcs Pictures;Action;86336;7.58;Harem;PG-13 - Teens 13 or older;Shounen
+33337;7.66;Madhouse;Drama;53539;7.51;Adult Cast;PG-13 - Teens 13 or older;Seinen
+30485;6.32;SILVER LINK.;Mystery;92158;7.04;Gore;R - 17+ (violence & profanity);UNKNOWN
+34414;7.49;Satelight;Action;93398;7.79;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+32924;7.12;J.C.Staff;Comedy;86327;7.85;CGDCT;PG-13 - Teens 13 or older;Seinen
+33417;7.09;Studio Deen;Boys Love;17706;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33089;7.54;Yaoyorozu;Adventure;98425;6.89;Anthropomorphic;PG - Children;UNKNOWN
+31783;7.64;TMS Entertainment;Sports;23627;7.99;Racing;PG-13 - Teens 13 or older;Shounen
+34148;6.62;EMT Squared;Comedy;101613;7.02;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+32878;6.1;Pierrot;Action;56945;6.75;Detective;PG-13 - Teens 13 or older;Shounen
+33019;6.87;Studio Deen;Comedy;121252;7.16;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34549;7.36;Khara;Adventure;108906;7.04;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33204;6.84;Signal.MD;Adventure;104959;6.56;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33013;7.26;Studio Deen;Boys Love;17706;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+33949;7.06;feel.;Comedy;76867;7.44;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34753;6.22;SILVER LINK.;Mystery;7653;6.09;Psychological;R - 17+ (violence & profanity);UNKNOWN
+34391;7.22;Sunrise;Action;37683;7.79;Mecha;R - 17+ (violence & profanity);UNKNOWN
+33818;7.36;J.C.Staff;Slice of Life;11061;7.79;Iyashikei;PG-13 - Teens 13 or older;Shounen
+33035;7.31;Kinema Citrus;Comedy;45353;7.52;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+36491;7.22;Foch Films;Action;79193;8;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+34759;6.87;T-Rex;Hentai;74673;7.12;UNKNOWN;Rx - Hentai;UNKNOWN
+34008;6.91;MAPPA;Sports;61009;7.58;School;PG-13 - Teens 13 or older;Shounen
+34016;5.97;Studio Deen;Comedy;65121;6.09;School;PG-13 - Teens 13 or older;Shoujo
+34088;5.62;LandQ studios;Action;52005;7.09;Historical;PG-13 - Teens 13 or older;UNKNOWN
+34535;6.62;Gathering;Boys Love;103028;7.3;Anthropomorphic;G - All Ages;Josei
+34394;6.44;W-Toon Studio;Comedy;81721;7.08;UNKNOWN;PG-13 - Teens 13 or older;UNKNOWN
+35522;6.74;SILVER LINK.;Comedy;75079;6.92;CGDCT;PG-13 - Teens 13 or older;UNKNOWN
+33487;6.75;SILVER LINK.;Comedy;46716;7.28;Harem;PG-13 - Teens 13 or older;Shounen
+33506;7.35;A-1 Pictures;Action;13492;7.89;Mythology;PG-13 - Teens 13 or older;Shounen
+32949;7.13;Lerche;Drama;44929;7.25;Love Polygon;R+ - Mild Nudity;Seinen
+33731;7.44;Doga Kobo;Comedy;96526;7.72;CGDCT;PG-13 - Teens 13 or older;Shounen
+33988;7.54;A-1 Pictures;Comedy;82745;7.75;Mythology;PG-13 - Teens 13 or older;Seinen
+34096;8.98;Bandai Namco Pictures;Action;44;8.63;Gag Humor;PG-13 - Teens 13 or older;Shounen
+31658;8.08;Production I.G;Sports;83807;7.86;School;PG-13 - Teens 13 or older;Shounen
+33743;6.51;Diomedéa;Drama;67019;7.43;Love Polygon;R+ - Mild Nudity;Shounen
+31812;8.25;A-1 Pictures;Action;3866;8.41;Historical;R - 17+ (violence & profanity);Shounen
+33095;8.72;Studio Deen;Drama;26704;8.28;Adult Cast;PG-13 - Teens 13 or older;Josei
+33581;7.24;Seven Arcs Pictures;Action;86336;7.57;Harem;PG-13 - Teens 13 or older;Shounen
+33337;7.66;Madhouse;Drama;53539;7.51;Adult Cast;PG-13 - Teens 13 or older;Seinen
+32924;7.12;J.C.Staff;Comedy;86327;7.86;CGDCT;PG-13 - Teens 13 or older;Seinen
+31783;7.64;TMS Entertainment;Sports;23627;7.98;Racing;PG-13 - Teens 13 or older;Shounen
+32878;6.1;Pierrot;Action;56945;6.75;Space;PG-13 - Teens 13 or older;Shounen
+33818;7.36;J.C.Staff;Slice of Life;11061;7.78;Iyashikei;PG-13 - Teens 13 or older;Shounen
+34008;6.91;MAPPA;Sports;61009;7.57;School;PG-13 - Teens 13 or older;Shounen
+34016;5.97;Studio Deen;Comedy;65121;6.09;School;PG-13 - Teens 13 or older;Shoujo
+34535;6.61;Gathering;Boys Love;103028;7.3;Anthropomorphic;G - All Ages;Josei

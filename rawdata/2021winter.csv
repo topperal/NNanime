@@ -1,30 +1,44 @@
-40028;8.82;MAPPA;Action;23390;8.56
-42897;8.21;CloverWorks;Romance;42451;8.44
-39535;8.37;Studio Bind;Drama;70261;8.76
-40852;8.18;TMS Entertainment;Adventure;103897;8.21
-39617;5.34;CloverWorks;Sci-Fi;100128;8.19
-39551;8.4;8bit;Action;87609;8.4
-42203;8.47;White Fox;Drama;74697;8.8
-39783;8.11;Bibury Animation Studios;Comedy;103851;7.96
-40750;6.33;TNK;Adventure;107279;6.63
-40935;7.83;Orange;Drama;103701;8.28
-41491;6.58;Studio Deen;Action;44485;7.53
-37984;7.45;Millepensee;Action;95012;8.42
-40908;7.41;Ajia-Do;Action;104076;7.73
-41899;6.3;Okuruto Noboru;Action;108401;6.7
-40530;7.14;Project No.9;Drama;102702;7.8
-39586;7.34;David Production;Comedy;91641;7.77
-40594;6.34;LIDENFILMS;Adventure;103176;6.89
-41109;7.06;Studio Deen;Action;46024;8.06
-41694;7.53;LIDENFILMS;Action;114638;7.62
-38474;8.53;C-Station;Slice of Life;94376;8.38
-40907;8.08;Toei Animation;Action;48151;7.83
-39808;8.39;SILVER LINK.;Slice of Life;17552;8.2
-41392;6.59;LIDENFILMS;Adventure;120616;8.07
-42250;7.95;Bones;Comedy;98379;8.19
-38853;2.91;Visual Flight;Action;90014;6.48
-41762;7.16;Asahi Production;Comedy;111086;7.22
-42822;7.16;Platinum Vision;Supernatural;129659;7.26
-40930;7.04;Yostar Pictures;Comedy;115955;7.38
-41556;7;J.C.Staff;Comedy;107239;7.88
-40957;6.64;Production I.G;Comedy;110154;7.21
+42897;8.2;CloverWorks;Romance;42451;8.43;School;PG-13 - Teens 13 or older;Shounen
+41587;7.38;Bones;Action;75989;8.09;School;PG-13 - Teens 13 or older;Shounen
+40852;8.17;TMS Entertainment;Adventure;103897;8.2;Survival;PG-13 - Teens 13 or older;Shounen
+39551;8.39;8bit;Action;87609;8.39;Isekai;PG-13 - Teens 13 or older;Shounen
+39617;5.29;CloverWorks;Fantasy;100128;8.17;Psychological;R - 17+ (violence & profanity);Shounen
+39783;8.07;Bibury Animation Studios;Comedy;103851;7.93;Harem;PG-13 - Teens 13 or older;Shounen
+40935;7.8;Orange;Drama;103701;8.26;Anthropomorphic;R - 17+ (violence & profanity);Shounen
+40908;7.39;Ajia-do;Action;104076;7.68;Mythology;R - 17+ (violence & profanity);Shounen
+39586;7.36;David Production;Comedy;91641;7.74;Anthropomorphic;PG-13 - Teens 13 or older;Shounen
+41694;7.53;LIDENFILMS;Action;114638;7.62;Anthropomorphic;PG-13 - Teens 13 or older;Seinen
+39486;9.04;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+39808;8.37;SILVER LINK.;Slice of Life;17552;8.21;CGDCT;PG-13 - Teens 13 or older;Seinen
+41762;7.16;Asahi Production;Comedy;111086;7.3;Educational;PG-13 - Teens 13 or older;Seinen
+44087;8.47;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+42822;7.16;Platinum Vision;Mystery;129659;7.22;Medical;PG-13 - Teens 13 or older;Shounen
+42894;8.15;Shuka;Drama;1859;8.66;Iyashikei;PG-13 - Teens 13 or older;Shoujo
+40814;7.78;GoHands;Comedy;14110;8;Gag Humor;R - 17+ (violence & profanity);Shounen
+40024;7.55;Toei Animation;Fantasy;92;8.2;Mahou Shoujo;PG-13 - Teens 13 or older;Shoujo
+40429;7.74;Toei Animation;Fantasy;92;8.2;Mahou Shoujo;PG-13 - Teens 13 or older;Shoujo
+41556;7.03;J.C.Staff;Gourmet;107239;7.91;Educational;PG-13 - Teens 13 or older;Shounen
+41674;7.78;J.C.Staff;Fantasy;81;8.63;Iyashikei;PG-13 - Teens 13 or older;Shounen
+41842;7.07;M.S.C;Sports;12965;7.37;School;PG-13 - Teens 13 or older;Shounen
+42897;8.2;CloverWorks;Romance;42451;8.43;School;PG-13 - Teens 13 or older;Shounen
+41587;7.38;Bones;Action;75989;8.09;School;PG-13 - Teens 13 or older;Shounen
+40852;8.17;TMS Entertainment;Adventure;103897;8.2;Survival;PG-13 - Teens 13 or older;Shounen
+39551;8.39;8bit;Action;87609;8.39;Isekai;PG-13 - Teens 13 or older;Shounen
+39617;5.29;CloverWorks;Fantasy;100128;8.17;Psychological;R - 17+ (violence & profanity);Shounen
+39783;8.07;Bibury Animation Studios;Comedy;103851;7.93;Harem;PG-13 - Teens 13 or older;Shounen
+40935;7.8;Orange;Drama;103701;8.26;Anthropomorphic;R - 17+ (violence & profanity);Shounen
+40908;7.39;Ajia-do;Action;104076;7.68;Mythology;R - 17+ (violence & profanity);Shounen
+39586;7.36;David Production;Comedy;91641;7.74;Anthropomorphic;PG-13 - Teens 13 or older;Shounen
+41694;7.53;LIDENFILMS;Action;114638;7.62;Anthropomorphic;PG-13 - Teens 13 or older;Seinen
+39486;9.04;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+39808;8.37;SILVER LINK.;Slice of Life;17552;8.21;CGDCT;PG-13 - Teens 13 or older;Seinen
+41762;7.16;Asahi Production;Comedy;111086;7.3;Educational;PG-13 - Teens 13 or older;Seinen
+44087;8.47;Bandai Namco Pictures;Action;44;8.62;Gag Humor;PG-13 - Teens 13 or older;Shounen
+42822;7.16;Platinum Vision;Mystery;129659;7.22;Medical;PG-13 - Teens 13 or older;Shounen
+42894;8.15;Shuka;Drama;1859;8.66;Iyashikei;PG-13 - Teens 13 or older;Shoujo
+40814;7.78;GoHands;Comedy;14110;8;Gag Humor;R - 17+ (violence & profanity);Shounen
+40024;7.55;Toei Animation;Fantasy;92;8.2;Mahou Shoujo;PG-13 - Teens 13 or older;Shoujo
+40429;7.74;Toei Animation;Fantasy;92;8.2;Mahou Shoujo;PG-13 - Teens 13 or older;Shoujo
+41556;7.03;J.C.Staff;Gourmet;107239;7.91;Educational;PG-13 - Teens 13 or older;Shounen
+41674;7.78;J.C.Staff;Fantasy;81;8.63;Iyashikei;PG-13 - Teens 13 or older;Shounen
+41842;7.07;M.S.C;Sports;12965;7.37;School;PG-13 - Teens 13 or older;Shounen
