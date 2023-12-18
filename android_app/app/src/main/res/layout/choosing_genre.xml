@@ -8,6 +8,7 @@
     android:fitsSystemWindows="true">
 
 
+
 <RelativeLayout
     android:background="@color/blue"
     android:layout_width="match_parent"
@@ -41,7 +42,7 @@
         android:textColor="@color/blue" />
 
  <androidx.recyclerview.widget.RecyclerView
-     android:id="@+id/listofstudio"
+     android:id="@+id/listofgenre"
      android:layout_width="match_parent"
      android:layout_below="@id/find"
      android:layout_height="480sp"
@@ -52,7 +53,7 @@
         android:id="@+id/previos"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_below="@id/listofstudio"
+        android:layout_below="@id/listofgenre"
         android:layout_marginStart="40sp"
         android:layout_marginTop="10sp"
         android:background="@drawable/circle"
@@ -64,7 +65,7 @@
         android:id="@+id/next"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_below="@id/listofstudio"
+        android:layout_below="@id/listofgenre"
         android:layout_marginStart="270sp"
         android:background="@drawable/circle"
         android:layout_marginTop="10sp"

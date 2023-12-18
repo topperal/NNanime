@@ -5,34 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:id="@+id/header_title"
+        android:layout_margin="10sp"
+        android:padding="10sp"
+        android:layout_centerHorizontal="true"/>
     <EditText
         android:id="@+id/manga_score"
         android:background="@drawable/rectangle_rounded_all"
         android:hint="input manga score..."
         android:inputType="numberDecimal"
         android:textColor="@color/blue"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="30sp"
         android:layout_marginStart="50sp"
         android:padding="20sp"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/header_title"
         />
-
-    <Spinner
-        android:id="@+id/spinner_genre"
+    <TextView
+        android:id="@+id/rules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/manga_score"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="50sp"
-        android:background="@drawable/rectangle_rounded_all"
-        android:hint="choose genre..."
+        android:textSize="18sp"
         android:padding="10sp"
-        android:textColor="@color/blue" />
+        android:layout_margin="20sp"
+        android:textColor="@color/yellow"
+        android:layout_below="@id/manga_score"/>
+
+
 
 <!--    <Spinner-->
+<!--        android:id="@+id/spinner_genre"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/manga_score"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginStart="50sp"-->
+<!--        android:layout_marginTop="50sp"-->
+<!--        android:background="@drawable/rectangle_rounded_all"-->
+<!--        android:hint="choose genre..."-->
+<!--        android:padding="10sp"-->
+<!--        android:textColor="@color/blue" />-->
+
+
+
+ <!--    <Spinner-->
 <!--        android:id="@+id/spinner_studio"-->
 <!--        android:background="@drawable/rectangle_rounded_all"-->
 <!--        android:hint = "choose studio..."-->
@@ -49,9 +73,9 @@
         android:id="@+id/udpate"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_below="@id/spinner_genre"
+        android:layout_below="@id/rules"
         android:layout_marginStart="30sp"
-        android:layout_marginTop="400sp"
+        android:layout_marginTop="250sp"
         android:background="@drawable/circle"
         android:src="@drawable/refresh"
         android:textColor="@color/black"
@@ -61,9 +85,9 @@
         android:id="@+id/next_to_studio"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_below="@id/spinner_genre"
+        android:layout_below="@id/rules"
         android:layout_marginStart="270sp"
-        android:layout_marginTop="400sp"
+        android:layout_marginTop="250sp"
         android:background="@drawable/circle"
         android:src="@drawable/next" />
 

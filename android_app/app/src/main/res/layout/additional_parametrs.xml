@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inputdata"
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="20sp"
+        android:padding="8sp"
+        android:textColor="@color/yellow"
+        android:textSize="36sp" />
+
+    <Spinner
+        android:id="@+id/spinner_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="choose theme..."
+        android:padding="10sp"
+        android:textColor="@color/blue"
+        android:layout_below="@id/header_title"/>
+
+    <Spinner
+        android:id="@+id/spinner_demographic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_theme"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="choose demographic..."
+        android:padding="10sp"
+        android:textColor="@color/blue" />
+
+    <Spinner
+        android:id="@+id/spinner_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_demographic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="choose rating..."
+        android:padding="10sp"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="10sp"
+        android:layout_margin="20sp"
+        android:textColor="@color/yellow"
+        android:layout_below="@id/spinner_rating"/>
+
+    <ImageButton
+        android:id="@+id/previos"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/rules"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="40sp"
+        android:background="@drawable/circle"
+        android:src="@drawable/previous"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/rules"
+        android:layout_marginStart="270sp"
+        android:layout_marginTop="40sp"
+        android:background="@drawable/circle"
+        android:src="@drawable/next" />
+
+</RelativeLayout>
