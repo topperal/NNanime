@@ -62,8 +62,9 @@ public class ProcessingGenre {
         HashSet<String> genries = new HashSet<>();//куча объектов, но без повторений (разновидность collection)
         String[] seasons = {"winter", "spring", "summer", "fall"};
         ArrayList<GenreInfo> genreSeason = new ArrayList();
-        for (int i = 2015; i < 2023; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
+        for (int i = 2015; i < 2024; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
             for (int j = 0; j < 4; j++) {
+                if(i==2023&&j==2) break;
                 genreSeason.addAll(getGenreData(i, seasons[j]));
             }
         }
@@ -152,8 +153,10 @@ public class ProcessingGenre {
         System.out.println("Time stamp N1:" + new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss:MM").format(new Date()));
 
         int maxIterations = 10000;
+//        NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+//        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
         ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
         ((LMS) neuralNet.getLearningRule()).setMaxIterations(maxIterations);//0-1
         TrainingSet trainingSet = new TrainingSet();
@@ -204,8 +207,8 @@ public class ProcessingGenre {
             this.season = season;
         }
 
-        public String getStudio(){
-            return name_genre;
-        }
+//        public String getStudio(){
+//            return name_genre;
+//        }
     }
 }
