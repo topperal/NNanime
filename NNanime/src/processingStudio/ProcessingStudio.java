@@ -63,8 +63,9 @@ public class ProcessingStudio {
         HashSet<String> studios = new HashSet<>();//куча объектов, но без повторений (разновидность collection)
         String[] seasons = {"winter", "spring", "summer", "fall"};
         ArrayList<StudioInfo> studioSeason = new ArrayList();
-        for (int i = 2015; i < 2023; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
+        for (int i = 2015; i < 2024; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
             for (int j = 0; j < 4; j++) {
+                if(i==2023&&j==2) break;
                 studioSeason.addAll(getStudioData(i, seasons[j]));
             }
         }
@@ -167,19 +168,15 @@ public class ProcessingStudio {
         System.out.println("Time stamp N1:" + new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss:MM").format(new Date()));
 
         int maxIterations = 10000;
+//        NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
+//        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
         ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
         ((LMS) neuralNet.getLearningRule()).setMaxIterations(maxIterations);//0-1
         TrainingSet trainingSet = new TrainingSet();
 
         ArrayList<Double> coeff = studiobyScore;
-
-            /*double[] fin = new double[coeff.size()];
-            for (int i = 0; i < coeff.size(); i++) {
-                fin[i] = coeff.get(i);
-                System.out.println(fin[i]);
-            }*/
         int dent = 10;
         for (int i = 0; i < coeff.size()-4; i++) {
             trainingSet.addElement(new SupervisedTrainingElement(new double[]{coeff.get(i)/dent,coeff.get(i+1)/dent,coeff.get(i+2)/dent,coeff.get(i+3)/dent},new double[]{coeff.get(i+4)/dent}));
