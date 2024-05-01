@@ -19,18 +19,18 @@
         android:textColor="@color/yellow"
         android:textSize="36sp" />
 
-    <TextView
-        android:id="@+id/got_it"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/header_title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10sp"
-        android:padding="5sp"
-        android:text="@string/got_it"
-        android:textAlignment="center"
-        android:textColor="@color/yellow"
-        android:textSize="18sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/got_it"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/header_title"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10sp"-->
+<!--        android:padding="5sp"-->
+<!--        android:text="@string/got_it"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/yellow"-->
+<!--        android:textSize="24sp" />-->
 
 <TextView
     android:id="@+id/main_genre"
@@ -38,8 +38,8 @@
     android:layout_height="wrap_content"
     android:text="@string/main_genre"
     android:textColor="@color/yellow"
-    android:layout_below="@id/got_it"
-    android:textSize="18sp"
+    android:layout_below="@id/header_title"
+    android:textSize="24sp"
     android:layout_centerHorizontal="true"/>
 
 <TextView
@@ -49,19 +49,20 @@
     android:text="@string/production_studio"
     android:textColor="@color/yellow"
     android:layout_below="@id/main_genre"
-    android:textSize="18sp"
+    android:textSize="24sp"
     android:layout_centerHorizontal="true"
     android:padding="5sp"/>
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/predict"
-    android:text="@string/prediction_score"
-    android:textSize="24sp"
-    android:layout_below="@id/production_studio"
-    android:layout_centerHorizontal="true"
-    android:textColor="@color/yellow"/>
+    <TextView
+        android:id="@+id/predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/production_studio"
+        android:layout_centerHorizontal="true"
+        android:text="@string/prediction_score"
+        android:textColor="@color/yellow"
+        android:textSize="26sp"
+        android:padding="10sp"/>
 
     <TextView
         android:id="@+id/res"
@@ -73,7 +74,8 @@
         android:layout_marginTop="10sp"
         android:background="@drawable/rectangle_rounded_all"
         android:padding="10sp"
-        android:textColor="@color/blue" />
+        android:textColor="@color/blue"
+        android:textSize="24sp"/>
 
     <ImageButton
         android:id="@+id/to_home"
@@ -81,7 +83,7 @@
         android:layout_height="50sp"
         android:layout_below="@id/light"
         android:layout_marginStart="270sp"
-        android:layout_marginTop="0sp"
+        android:layout_marginTop="10sp"
         android:background="@drawable/circle"
         android:src="@drawable/home" />
     <ImageView

@@ -15,25 +15,26 @@
         android:layout_margin="10sp"
         android:padding="10sp"
         android:layout_centerHorizontal="true"/>
+
     <EditText
         android:id="@+id/manga_score"
-        android:background="@drawable/rectangle_rounded_all"
-        android:hint="input manga score..."
-        android:inputType="numberDecimal"
-        android:textColor="@color/blue"
-        android:layout_marginTop="30sp"
-        android:layout_marginStart="50sp"
-        android:padding="20sp"
-        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header_title"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:hint="input manga score..."
+        android:inputType="numberDecimal"
+        android:padding="20sp"
+        android:textColor="@color/blue"
+        android:textSize="24sp"/>
     <TextView
         android:id="@+id/rules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:padding="10sp"
         android:layout_margin="20sp"
         android:textColor="@color/yellow"
@@ -75,7 +76,7 @@
         android:layout_height="50sp"
         android:layout_below="@id/rules"
         android:layout_marginStart="30sp"
-        android:layout_marginTop="250sp"
+        android:layout_marginTop="156sp"
         android:background="@drawable/circle"
         android:src="@drawable/refresh"
         android:textColor="@color/black"
@@ -87,7 +88,7 @@
         android:layout_height="50sp"
         android:layout_below="@id/rules"
         android:layout_marginStart="270sp"
-        android:layout_marginTop="250sp"
+        android:layout_marginTop="156sp"
         android:background="@drawable/circle"
         android:src="@drawable/next" />
 

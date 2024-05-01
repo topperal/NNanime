@@ -68,9 +68,9 @@
         android:id="@+id/rules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:padding="10sp"
-        android:layout_margin="20sp"
+        android:textSize="24sp"
+        android:padding="8sp"
+        android:layout_margin="10sp"
         android:textColor="@color/yellow"
         android:layout_below="@id/spinner_rating"/>
 
@@ -80,7 +80,7 @@
         android:layout_height="50sp"
         android:layout_below="@id/rules"
         android:layout_marginStart="40sp"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="5sp"
         android:background="@drawable/circle"
         android:src="@drawable/previous"
         android:textColor="@color/black"
@@ -92,7 +92,7 @@
         android:layout_height="50sp"
         android:layout_below="@id/rules"
         android:layout_marginStart="270sp"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="5sp"
         android:background="@drawable/circle"
         android:src="@drawable/next" />
 
