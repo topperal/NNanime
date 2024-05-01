@@ -161,7 +161,7 @@ public class ReadData implements BroadcastData{
 
     @Override
     public void registerFrag(ListenerData predictFrag) {
-        fragments.add(predictFrag);
+        fragments.add(predictFrag); // добавляем любой фрагмент которыф имплементирует интерфейс ListenerData
     }
 
     @Override
