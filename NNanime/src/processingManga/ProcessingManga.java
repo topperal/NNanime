@@ -15,26 +15,37 @@ import java.util.Vector;
 import java.util.stream.Stream;
 
 public class ProcessingManga {
-    public ArrayList<MangaCoeff> relationScores() {//заполняем собств класс, содержащий коэффициенты а и в из у=ах+в и знач дисперсии
+    public ArrayList<MangaCoeff> relationScores(int year_end, int season, boolean final_forecasting) {//заполняем собств класс, содержащий коэффициенты а и в из у=ах+в и знач дисперсии
+        String[] seasons = {"winter", "spring", "summer", "fall"};
         FileWriter fileWriter = null;
         PrintWriter printWriter = null;
         int k = 0;
-
-        try {
-            fileWriter = new FileWriter("rawdata/predictionData.txt",true);//создание файла, в которые записываются данные
-            //fileWriter = new FileWriter("rawdata/hyperParametrs.txt",true);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if(final_forecasting==true) {
+            try {
+                fileWriter = new FileWriter("rawdata/predictionData.txt",true);//создание файла, в которые записываются данные
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            printWriter = new PrintWriter(fileWriter);
         }
-        printWriter = new PrintWriter(fileWriter);
+        else {
+            try {
+                fileWriter = new FileWriter("rawdata/jsons/predictionData"+year_end+seasons[season]+".txt",true);//создание файла, в которые записываются данные
+                //fileWriter = new FileWriter("rawdata/hyperParametrs.txt",true);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            printWriter = new PrintWriter(fileWriter);
+        }
+
 
         ArrayList<MangaCoeff> finalData = new ArrayList<>();
         ArrayList<Double> xA = new ArrayList<>();
         ArrayList<Double> yA = new ArrayList<>();
-        String[] seasons = {"winter", "spring", "summer", "fall"};
+//        String[] seasons = {"winter", "spring", "summer", "fall"};
         String finalLine = "";
 
-        for (int i = 2015; i < 2024; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
+        for (int i = 2015; i <= year_end; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
             for (int j = 0; j < 4; j++) {//проходим по всем сезонам
                 ArrayList[] result = new ArrayList[2];
                 result = getMangaData(i, seasons[j]);//в массив записываем рейтинги аниме и манги
@@ -48,13 +59,14 @@ public class ProcessingManga {
                 finalData.add(new MangaCoeff((i+0.25*j),res[0],res[1], disp));//заполняем собств класс
                 //System.out.println("f(x) = " + res[0] + " * x + " + res[1] + "   dispersia: " + disp);
 
-                if ((i == 2023) && (j == 2)) {
-
+                if(i==year_end&&j==season) {
                     double[] predictManga = new double[3];
                     for (int h = 0; h < 3; h++) {//finalData содержит коэфф а, б и дисперсию
                         predictManga[h] = trainNeuralNetwork(h, finalData);
                     }
                     finalLine += "{\"koeffA\":" + predictManga[0] + ",\n\"koeffB\":" + predictManga[1] + ",\n\"mangdisp\":" + predictManga[2] +",\n" ;
+//                    printWriter.print(finalLine);
+//                    printWriter.flush();
                     break;
                 }
             }
@@ -74,7 +86,7 @@ public class ProcessingManga {
         NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
 //        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
-        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.08);//0-1
         ((LMS) neuralNet.getLearningRule()).setMaxIterations(maxIterations);//0-1
         TrainingSet trainingSet = new TrainingSet();
 
@@ -162,6 +174,17 @@ public class ProcessingManga {
 
         result[0]=aDet/mainDet;
         result[1]=bDet/mainDet;
+
+        //коэфф корреляции
+        streamFromY = yArr.stream();
+        double sumSqY = streamFromY.mapToDouble(i -> i.doubleValue()*i.doubleValue()).sum();//в потоке возводим в квадрат знач вектора Х и суммируем их
+        double mean_x = sumX/xArr.size();
+        double mean_y = sumy/yArr.size();
+        double mean_mult = mult/xArr.size();
+        double dev_x = Math.sqrt(sumSqX/ xArr.size()-mean_x*mean_x);
+        double dev_y = Math.sqrt(sumSqY/ yArr.size()-mean_y*mean_y);
+        double corr = (mean_mult-mean_x*mean_y)/(dev_x*dev_y);
+        System.out.println("Coeff corr: " + corr);
 
         return result;
     }

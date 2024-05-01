@@ -48,23 +48,34 @@ public class ProcessingRating {
         return scoreAll;
     }
 
-    public void call() {
+    public void call(int year_end, int season, boolean final_forecasting) {
+        String[] seasons = {"winter", "spring", "summer", "fall"};
         FileWriter fileWriter = null;
         PrintWriter printWriter = null;
         String finalLine = "\"rating\":[";
-        try {
-            fileWriter = new FileWriter("rawdata/predictionData.txt",true);//создание файла, в которые записываются данные
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if(final_forecasting==true){
+            try {
+                fileWriter = new FileWriter("rawdata/predictionData.txt",true);//создание файла, в которые записываются данные
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            printWriter = new PrintWriter(fileWriter);
         }
-        printWriter = new PrintWriter(fileWriter);
+        else{
+            try {
+                fileWriter = new FileWriter("rawdata/jsons/predictionData"+year_end+seasons[season]+".txt",true);//создание файла, в которые записываются данные
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            printWriter = new PrintWriter(fileWriter);
+        }
 
         HashSet<String> ratings = new HashSet<>();//куча объектов, но без повторений (разновидность collection)
-        String[] seasons = {"winter", "spring", "summer", "fall"};
+
         ArrayList<ProcessingRating.RatingInfo> ratingSeason = new ArrayList();
-        for (int i = 2015; i < 2024; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
+        for (int i = 2015; i <= year_end; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
             for (int j = 0; j < 4; j++) {
-                if(i==2023&&j==2) break;
+                if(i==year_end&&j==season) break;
                 ratingSeason.addAll(getRatingData(i, seasons[j]));
             }
         }
@@ -157,7 +168,7 @@ public class ProcessingRating {
         NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
 //        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
-        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.08);//0-1
         ((LMS) neuralNet.getLearningRule()).setMaxIterations(maxIterations);//0-1
         TrainingSet trainingSet = new TrainingSet();
 

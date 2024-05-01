@@ -47,23 +47,40 @@ public class ProcessingDemographic {
         return scoreAll;
     }
 
-    public void call() {
+    public void call(int year_end, int season, boolean final_forecastinh) {
+        String[] seasons = {"winter", "spring", "summer", "fall"};
         FileWriter fileWriter = null;
         PrintWriter printWriter = null;
         String finalLine = "\"demographic\":[";
-        try {
-            fileWriter = new FileWriter("rawdata/predictionData.txt",true);//создание файла, в которые записываются данные
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if(final_forecastinh==true){
+            try {
+                fileWriter = new FileWriter("rawdata/predictionData.txt",true);//создание файла, в которые записываются данные
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            printWriter = new PrintWriter(fileWriter);
         }
-        printWriter = new PrintWriter(fileWriter);
+        else{
+            try {
+                File file = new File("rawdata/jsons/predictionData"+year_end+seasons[season]+".txt");
+//            if(file.exists()) {
+//                if(file.delete()){
+//                    System.out.println("file.txt файл был удален с корневой папки проекта");
+//                }else System.out.println("Файл file.txt не был найден в корневой папке проекта");
+//            }
+                fileWriter = new FileWriter(file,true);//создание файла, в которые записываются данные
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            printWriter = new PrintWriter(fileWriter);
+        }
 
         HashSet<String> demographics = new HashSet<>();//куча объектов, но без повторений (разновидность collection)
-        String[] seasons = {"winter", "spring", "summer", "fall"};
+//        String[] seasons = {"winter", "spring", "summer", "fall"};
         ArrayList<ProcessingDemographic.DemographicInfo> demographicSeason = new ArrayList();
-        for (int i = 2015; i < 2024; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
+        for (int i = 2015; i <= year_end; i++ ) {//просматриваем все тайтлы с периода 2015 по 2022 включительно
             for (int j = 0; j < 4; j++) {
-                if(i==2023&&j==2) break;
+                if(i==year_end&&j==season) break;
                 demographicSeason.addAll(getDemographicData(i, seasons[j]));
             }
         }
@@ -156,7 +173,7 @@ public class ProcessingDemographic {
         NeuralNetwork neuralNet = new MultiLayerPerceptron(4, 8, 1);
         ((LMS) neuralNet.getLearningRule()).setMaxError(0.001);//0-1
 //        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.006);//0-1
-        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.7);//0-1
+        ((LMS) neuralNet.getLearningRule()).setLearningRate(0.08);//0-1 0.7 prev
         ((LMS) neuralNet.getLearningRule()).setMaxIterations(maxIterations);//0-1
         TrainingSet trainingSet = new TrainingSet();
 

@@ -47,6 +47,9 @@ public class GetInfo {
         String manga_score = null;//рейтинг манги
         String id_manga = null;//id манги (нужно для получения рейтинга манги)
         String genre = null;//"главный" жанр
+        String theme = null;//тема
+        String rating = null;//возрастной рейтинг
+        String demographic = null;//демографическая группа
         String studioname = null;//название студии-создателя
         String anime_score = null;//рейтинг аниме
         String id_anime = null;//id аниме (нужно для получения рейтинга, жанра, названия студии)
@@ -97,9 +100,33 @@ public class GetInfo {
                 }else {
                     anime_score = null;
                 }
+                //
+                JSONArray themeArr = (JSONArray) test.get("themes");//список всех жанров
+                theme = null;
+                if(themeArr.size()==0){//если список пуст, то жанр считается неизвестным
+                    theme = "UNKNOWN";
+                }else {//в противном случае, считаем за "главный" жанр первый в списке
+                    JSONObject th = (JSONObject) themeArr.get(0);//объект, содержащий всю инфо о жанре
+                    theme = (String) th.get("name");//достаем название жанра
+                }
+                if(test.get("rating")!=null) {
+                    rating = test.get("rating").toString();
+                }
+                else {
+                    rating = "UNKNOWN";
+                }
+                JSONArray demographicArr = (JSONArray) test.get("demographics");//список всех жанров
+                demographic = null;
+                if(demographicArr.size()==0){//если список пуст, то жанр считается неизвестным
+                    demographic = "UNKNOWN";
+                }else {//в противном случае, считаем за "главный" жанр первый в списке
+                    JSONObject dg = (JSONObject) demographicArr.get(0);//объект, содержащий всю инфо о жанре
+                    demographic = (String) dg.get("name");//достаем название жанра
+                }
+                //
                 id_anime = Long.toString((Long)test.get("mal_id"));//достаем id аниме из json объекта
-                System.out.println("- id: " + id_anime + "  - score: " + anime_score +
-                        "  - studio: " + studioname + "  - genre: " + genre);
+//                System.out.println("- id: " + id_anime + "  - score: " + anime_score +
+//                        "  - studio: " + studioname + "  - genre: " + genre + "  - theme: " + theme + "  - rating: " + rating + "  - demographic: " + demographic);
 
                 Long mal_id = (Long) test.get("mal_id");//преобразуем Object к int
                 String allrelations = getMangaIdbyAnimeId(mal_id);//возвращаем все связанные произв по id аниме
@@ -150,8 +177,8 @@ public class GetInfo {
                     }
                 }//если все поля непусты и известны, то записываем данные в файл
                 if ((anime_score != null) && (studioname.equalsIgnoreCase("UNKNOWN")==false) && (genre.equalsIgnoreCase("UNKNOWN")==false)
-            && (id_manga != null) && (manga_score!=null)) {
-                    String finalLine =  id_anime + ";" + anime_score + ";" + studioname + ";" + genre + ";" +id_manga + ";" + manga_score + "\n";
+            && (id_manga != null) && (manga_score!=null) && (theme.equalsIgnoreCase("UNKNOWN")==false) && (rating.equalsIgnoreCase("UNKNOWN")==false) && (demographic.equalsIgnoreCase("UNKNOWN")==false)) {
+                    String finalLine =  id_anime + ";" + anime_score + ";" + studioname + ";" + genre + ";" +id_manga + ";" + manga_score + ";" + theme + ";" + rating + ";" + demographic + "\n";
                     printWriter.print (finalLine);
                     printWriter.flush();
                     System.out.println(finalLine);
@@ -206,6 +233,9 @@ public class GetInfo {
                 JSONObject test = (JSONObject) entryItr.next();//преобразуем элемент итератора в json объект
                 if (test.get("relation").toString().equalsIgnoreCase("Adaptation")) {//если в списке связанных произв есть поле Адаптация
                     JSONArray entryArr = (JSONArray) test.get("entry");
+                    if(entryArr.isEmpty()==true) break;
+//                    System.out.println(entryArr.isEmpty());
+//                    System.out.println(entryArr.get(0));
                     JSONObject en = (JSONObject) entryArr.get(0);
                     id_manga = en.get("mal_id").toString();
                 }
